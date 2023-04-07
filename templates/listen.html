@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<h3 align="center">{% trans "listen" %}</h3>		
+	<p>arlecchino</p>
+	<audio controls>
+		<source src="{% static 'mp3/arlecchino.mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/arlecchino.mp3' %}">arlecchino</a>.
+	</audio>
+	<p>capitano</p>
+	<audio controls>
+		<source src="{% static 'mp3/capitano.mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/capitano.mp3' %}">capitano</a>.
+	</audio>
+	<p>Desert Lioness</p>
+	<audio controls>
+		<source src="{% static 'mp3/Desert_Lioness.mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/Desert_Lioness.mp3' %}">Desert Lioness</a>.
+	</audio>
+	<p>Disown Others (ft. Rock Dandelion)</p>
+	<audio controls>
+		<source src="{% static 'mp3/Disown_Others_(ft.Rock_Dandelion).mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/Disown_Others_(ft.Rock_Dandelion).mp3.mp3' %}">Disown Others (ft. Rock Dandelion)</a>.
+	</audio>
+	<p>Forgotten Quotient</p>
+	<audio controls>
+		<source src="{% static 'mp3/Forgotten_Quotient.mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/Forgotten_Quotient.mp3' %}">Forgotten Quotient</a>.
+	</audio>
+	<p>My native enemy</p>
+	<audio controls>
+		<source src="{% static 'mp3/My_native_enemy.mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/My_native_enemy.mp3' %}">My native enemy</a>.
+	</audio>
+	<p>scaramouche</p>
+	<audio controls>
+		<source src="{% static 'mp3/scaramouche.mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/scaramouche.mp3' %}">scaramouche</a>.
+	</audio>
+	<p>The Rooster</p>
+	<audio controls>
+		<source src="{% static 'mp3/The_Rooster.mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/The_Rooster.mp3' %}">The Rooster</a>.
+	</audio>
+	<p>Undos</p>
+	<audio controls>
+		<source src="{% static 'mp3/Undos.mp3' %}" type="audio/mpeg">
+		<a href="{% static 'mp3/Undos.mp3' %}">Undos</a>.
+	</audio>
+<div class="row">
+	
+</div>
+{% endblock content %}

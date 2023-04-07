@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "ticket" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<h4>{{ ticket.concert }}</h4>
+		</div>
+		<div class="card-body">
+			<h5>{{ ticket.user }}</h5>
+			<p>{% trans "price" %}: {{ ticket.price }}</p>				
+		</div>
+		<div class="card-footer">				
+			<p>{% trans "datet" %}: {{ ticket.datet | date:"d.m.Y H:i" }}</p>			
+		</div>		
+	</div>
+	<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'ticket_index' %}">{% trans "Back" %}</a>    	
+</div>
+
+{% endblock content %}

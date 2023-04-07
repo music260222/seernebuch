@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "concerts" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "concerts" %}</h2>
+{% if concert.count > 0 %}
+<div class="row">
+	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "datec" %}</th>
+				<th>{% trans "city" %}</th>
+				<th>{% trans "price" %}</th>
+				<!--<th></th>-->
+				<th><a href="{% url 'concert_create'%}">{% trans "Add" %}</a></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in concert %}
+			<tr>
+				<td>
+					<p>{{ n.datec | date:"d.m.Y H:i" }}</p>
+				</td>
+				<td>
+					<p>{{ n.city }}</p>	
+					<p>{{ n.hall }}</p>	
+				</td>
+				<td>
+					<p>{{ n.price }}</p>
+				</td>
+				<td>
+					<a href="{% url 'concert_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'concert_read' n.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'concert_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'concert_create'%}">{% trans "Create" %}</a>
+{% endif %}
+{% endblock content %}
+

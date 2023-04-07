@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "tickets" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+{% if concert_id != None %}
+<form method="post">
+	<h3>{{ datec }}</h3>			
+	<h3>{{ city }}</h3>			
+	<h3>{{ hall }}</h3>			
+	<h3>{{ price }}</h3>
+	{% csrf_token %}
+	<button type="submit" name="btnBuy" id="btnBuy" class="btn btn-outline-success" >{% trans "To buy a ticket" %}</button>						
+	<input  type="text" name="concert_id" size="0" value="{{ concert_id }}">
+	<input  type="text" name="datec" size="0" value="{{ datec }}">
+	<input  type="text" name="city" size="0" value="{{ city }}">
+	<input  type="text" name="hall" size="0" value="{{ hall }}">
+	<input  type="text" name="price" size="0" value="{{ price }}">		
+</form>
+{% endif %}
+<h2>{% trans "my tickets" %}</h2>			
+{% if ticket.count > 0 %}
+<div class="row">
+	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "datet" %}</th>
+				<th>{% trans "concert" %}</th>
+				<th>{% trans "price" %}</th>
+				<th>{% trans "user" %}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in ticket %}
+			<tr>
+				<td>
+					<p>{{ n.datet | date:"d.m.Y H:i" }}</p>
+				</td>
+				<td>
+					<p>{{ n.concert }}</p>	
+				</td>
+				<td>
+					<p>{{ n.price }}</p>	
+				</td>
+				<td>
+					<p>{{ n.user }}</p>	
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

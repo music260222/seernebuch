@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App Name" %}{% endblock title %}
+{% block header %}
+	
+{% endblock header %}
+{% block content %}
+<div class="jumbotron" style="margin:5px; background-color: beige">
+	<h1>SeerNeBuch</h1>
+	 
+	<div class="row">
+		<div class="col-md-8">
+			<p>Независимый и индивидуальный музыкальный артист, не состоящий ни в одном лейбле или группе. Написание музыки доверяет не столько профессиональным навыкам, сколько собственной фантазии, не ограничиваясь каким-либо единым жанром, постоянно экспериментируя и развивая музыкальные навыки. Использует псевдоним <strong>SeerNeBuch</strong> (с нем. ЗеерНеБух) в качестве основного и публичного никнейма. Также имеет небольшую выдуманную предысторию, с целью добавить имени ЗеерНеБух больше глубины и смысла. Более подробную информацию можно найти на официальном YouTube канале во вкладке «О канале», перейдя по ссылке здесь: <a href="https://www.youtube.com/@SeerNeBuch/about">https://www.youtube.com/@SeerNeBuch/about</a></p>	
+			<p>ЗеерНеБух занимается творчеством исключительно на индивидуальной основе, не имея стабильного заработка, как и самого заработка в целом, а потому новые композиции могут выходить в совершенно случайное время. Однако, на данный момент я придерживаюсь следующего графика:</p>				
+			<p>Новые композиции выходят наYouTube канале по субботам в 10:00 утра.</p>
+			<p>Изображение нового сингла выходит на YouTube канале по субботам в 10:00 вечера, а также в других социальных сетях, таких как ВКонтакте, Twitter и Facebook</p>								
+		</div>								
+		<div class="col-md-4">
+			<img src="{% static 'images/profile.png' %}" alt="" style="width:100%; padding: 10px;">
+		</div>
+	</div>
+	
+	<hr class="my-4">	
+		<h1><a href="{% url 'news_list' %}">{% trans "newss" %}</a></h1>
+	<hr class="my-4">
+	
+	<div class="row">
+	{% if news1.count > 0 %}
+		<div class="col-lg-9 border" style="padding:10px;">
+			{% for c in news1 %}
+				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
+				{% if c.photo.url == "/media/images/news7.jpeg" %}
+					<img class="img-center" src="{% static 'images/news7.jpeg' %}" alt="{{ c.title }}" title="{{ c.details }}">
+				{% else %}
+					{% if c.photo.url != None %}
+						<img class="img-center" src="{{ c.photo.url}}" alt="{{ c.title }}" title="{{ c.details }}">
+					{% endif %}
+				{% endif %}
+				<h4><a href="{% url 'news_read' c.id %}">{{ c.title }}</a></h4>
+				<p>{{ c.details }}</p>
+			{% endfor %}
+		</div>
+		<div class="col-lg-3 border" style="padding:10px;">
+			{% if news24.count > 0 %}
+				{% for c in news24 %}
+				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
+				<div class="row">
+					{% if c.photo.url == "/media/images/news4.jpeg" %}
+						<img class="img-center3" src="{% static 'images/news4.jpeg' %}" alt="{{ c.title }}" title="{{ c.details }}">
+					{% elif c.photo.url == "/media/images/news5.jpeg" %}
+						<img class="img-center3" src="{% static 'images/news5.jpeg' %}" alt="{{ c.title }}" title="{{ c.details }}">
+					{% elif c.photo.url == "/media/images/news6.jpeg" %}
+						<img class="img-center3" src="{% static 'images/news6.jpeg' %}" alt="{{ c.title }}" title="{{ c.details }}">
+					{% else %}
+						{% if n.photo.url != None %}
+							<img class="img-center3" src="{{ c.photo.url}}" alt="{{ c.title }}" title="{{ c.details }}">
+						{% endif %}
+					{% endif %}
+				</div>
+				<div class="row">
+					<h5><a href="{% url 'news_read' c.id %}">{{ c.title }}</a></h5>
+				</div>
+				<hr class="my-4">
+				{% endfor %}
+			{% endif %}
+		</div>
+		{% endif %}
+		
+	</div>
+
+	
+</div>
+
+
+{% endblock content %}
+
+

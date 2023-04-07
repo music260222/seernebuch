@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "concerts" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "concerts" %}</h2>
+<!-- {% if concert.count > 0 %} -->
+<div class="row">
+	<table id="myTable" style="width:100%">
+		<thead>
+			<tr>
+				<th></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in concert %}
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-header">
+							<h4>{{ n.datec | date:"d.m.Y H:i"  }}</h4>							
+						</div>
+						<div class="card-body">					
+							<h3>{{ n.city }}</h3>			
+							<h4>{{ n.hall }}</h4>	
+							{% if user.is_authenticated %}
+								<form method="post">
+									{% csrf_token %}
+									<button onclick="return confirm('Купить билет?')" type="submit" name="btn{{ n.id }}" id="btn_id{{ n.id }}" class="btn btn-outline-success" >{% trans "To buy a ticket" %}</button>						
+									<input hidden type="text" name="concert_id" size="0" value="{{ n.id }}">
+									<input hidden type="text" name="datec" size="0" value="{{ n.datec }}">
+									<input hidden type="text" name="city" size="0" value="{{ n.city }}">
+									<input hidden type="text" name="hall" size="0" value="{{ n.hall }}">
+									<input hidden type="text" name="price" size="0" value="{{ n.price }}">									
+								</form>
+							{% endif %}
+						</div>
+						<div class="card-footer text-muted">
+							<p>{% trans "price" %}: {{ n.price }}</p>
+						</div>
+					</div>
+				</td>	
+			</tr>
+			{% endfor %}	
+		</tbody>
+	</table>	
+</div>
+<!-- {% endif %} -->
+{% endblock content %}
+

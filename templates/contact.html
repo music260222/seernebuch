@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<div class="row">
+	<div class="col-md-4">		
+		<h3 align="center" style="padding-top: 20px;">Контакты:</h3>
+		<!-- <p style="padding-top: 20px;"><a href="tel:+77011111111">Тел.: +7-701-111-1111</a><p> -->
+		<p><a href="mailto:seernebuch@gmail.com">seernebuch@gmail.com</a><p>
+	</div>								
+	<div class="col-md-8">
+		<img src="{% static 'images/gallery10.jpg' %}" alt="" style="width:100%; padding: 10px;">
+	</div>
+</div>
+{% endblock content %}
