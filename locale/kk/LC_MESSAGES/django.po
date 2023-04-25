@@ -8,17 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-30 17:01+0600\n"
+"POT-Creation-Date: 2023-04-25 20:26+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
-"100>=11 && n%100<=14)? 2 : 3);\n"
-
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 #: .\band\forms.py:47 .\band\forms.py:48 .\templates\concert\create.html:6
 #: .\templates\concert\edit.html:6 .\templates\concert\read.html:6
 #: .\templates\ticket\index.html:13 .\templates\ticket\list.html:28
@@ -27,120 +24,120 @@ msgstr "Концерт"
 
 #: .\band\models.py:35 .\templates\news\index.html:12
 msgid "daten"
-msgstr "Дата"
+msgstr "Күні"
 
 #: .\band\models.py:36
 msgid "title_news"
-msgstr "Заголовок"
+msgstr "Тақырып"
 
 #: .\band\models.py:37
 msgid "details_news"
-msgstr "Детали"
+msgstr "Толығырақ"
 
 #: .\band\models.py:38
 msgid "photo_news"
-msgstr "Фотография"
+msgstr "Фотосурет"
 
 #: .\band\models.py:61 .\templates\concert\index.html:12
 msgid "datec"
-msgstr "Дата"
+msgstr "Күні"
 
 #: .\band\models.py:62 .\templates\concert\index.html:13
 msgid "city"
-msgstr "Город"
+msgstr "Қала"
 
 #: .\band\models.py:63
 msgid "hall"
-msgstr "Концертная площадка"
+msgstr "Концерт алаңы"
 
 #: .\band\models.py:64 .\band\models.py:83 .\templates\concert\index.html:14
 #: .\templates\concert\list.html:39 .\templates\concert\read.html:17
 #: .\templates\ticket\index.html:14 .\templates\ticket\list.html:29
 #: .\templates\ticket\read.html:14
 msgid "price"
-msgstr "Цена"
+msgstr "Бағасы"
 
 #: .\band\models.py:81 .\templates\ticket\index.html:12
 #: .\templates\ticket\list.html:27 .\templates\ticket\read.html:17
 msgid "datet"
-msgstr "Дата продажи"
+msgstr "Сату күні"
 
-#: .\templates\about.html:7 .\templates\base.html:43
+#: .\templates\about.html:8 .\templates\base.html:44
 msgid "about"
-msgstr "О исполнителе"
+msgstr "Орындаушы туралы"
 
-#: .\templates\base.html:36
+#: .\templates\base.html:37
 msgid "Home"
-msgstr "Главная"
+msgstr "Басты бет"
 
-#: .\templates\base.html:46 .\templates\listen.html:8
+#: .\templates\base.html:47 .\templates\listen.html:7
 msgid "listen"
-msgstr "Послушать"
+msgstr "Тыңдау"
 
-#: .\templates\base.html:49 .\templates\base.html:68
+#: .\templates\base.html:50 .\templates\base.html:69
 #: .\templates\concert\index.html:3 .\templates\concert\index.html:6
 #: .\templates\concert\list.html:3 .\templates\concert\list.html:6
 msgid "concerts"
-msgstr "Концерты"
+msgstr "Концерттер"
 
-#: .\templates\base.html:52 .\templates\base.html:67 .\templates\index.html:10
+#: .\templates\base.html:53 .\templates\base.html:68 .\templates\index.html:25
 #: .\templates\news\index.html:3 .\templates\news\index.html:6
-#: .\templates\news\list.html:3 .\templates\news\list.html:6
+#: .\templates\news\list.html:4 .\templates\news\list.html:7
 msgid "newss"
-msgstr "Новости"
+msgstr "Жаңалықтар"
 
-#: .\templates\base.html:55 .\templates\gallery.html:8
+#: .\templates\base.html:56
 msgid "gallery"
 msgstr "Галерея"
 
-#: .\templates\base.html:58 .\templates\contact.html:8
+#: .\templates\base.html:59
 msgid "contacts"
-msgstr "Контакты"
+msgstr "Байланыс"
 
-#: .\templates\base.html:69 .\templates\ticket\index.html:3
+#: .\templates\base.html:70 .\templates\ticket\index.html:3
 #: .\templates\ticket\index.html:6 .\templates\ticket\list.html:3
 msgid "tickets"
-msgstr "Билеты"
+msgstr "Билеттер"
 
-#: .\templates\base.html:72 .\templates\ticket\list.html:21
+#: .\templates\base.html:73 .\templates\ticket\list.html:21
 msgid "my tickets"
-msgstr "Мои билеты"
+msgstr "Менің билеттерім"
 
-#: .\templates\base.html:75 .\templates\registration\my_account.html:4
+#: .\templates\base.html:76 .\templates\registration\my_account.html:4
 #: .\templates\registration\my_account.html:10
 msgid "My account"
-msgstr "Моя учетная запись"
+msgstr "Менің есептік жазбам"
 
-#: .\templates\base.html:76
+#: .\templates\base.html:77
 #: .\templates\registration\password_change_form.html:9
 #: .\templates\registration\password_change_form.html:14
 msgid "Change password"
-msgstr "Изменить пароль"
+msgstr "Құпия сөзді өзгерту"
 
-#: .\templates\base.html:78
+#: .\templates\base.html:79
 msgid "Log out"
-msgstr "Выход"
+msgstr "Шығу"
 
-#: .\templates\base.html:83
+#: .\templates\base.html:84
 msgid "Log In"
-msgstr "Вход"
+msgstr "Кіру"
 
-#: .\templates\base.html:84 .\templates\registration\signup.html:4
+#: .\templates\base.html:85 .\templates\registration\signup.html:4
 #: .\templates\registration\signup.html:10
 msgid "Sign up"
-msgstr "Регистрация"
+msgstr "Тіркеу"
 
 #: .\templates\concert\create.html:3 .\templates\concert\index.html:43
 #: .\templates\news\create.html:3 .\templates\news\index.html:45
 #: .\templates\ticket\create.html:3 .\templates\ticket\index.html:55
 msgid "Create"
-msgstr "Добавить"
+msgstr "Қосу"
 
 #: .\templates\concert\create.html:12 .\templates\concert\edit.html:12
 #: .\templates\news\create.html:12 .\templates\news\edit.html:12
 #: .\templates\ticket\create.html:12 .\templates\ticket\edit.html:12
 msgid "Save"
-msgstr "Сохранить"
+msgstr "Сақтау"
 
 #: .\templates\concert\create.html:13 .\templates\concert\edit.html:13
 #: .\templates\concert\read.html:20 .\templates\news\create.html:13
@@ -148,37 +145,37 @@ msgstr "Сохранить"
 #: .\templates\ticket\create.html:13 .\templates\ticket\edit.html:13
 #: .\templates\ticket\read.html:20
 msgid "Back"
-msgstr "Назад"
+msgstr "Артқа"
 
 #: .\templates\concert\edit.html:3 .\templates\concert\index.html:33
 #: .\templates\news\edit.html:3 .\templates\news\index.html:35
 #: .\templates\ticket\edit.html:3 .\templates\ticket\index.html:45
 msgid "Change"
-msgstr "Изменить"
+msgstr "Өзгерту"
 
 #: .\templates\concert\index.html:16 .\templates\news\index.html:15
 #: .\templates\ticket\index.html:17
 msgid "Add"
-msgstr "Добавить"
+msgstr "Қосу"
 
 #: .\templates\concert\index.html:34 .\templates\news\index.html:36
 #: .\templates\ticket\index.html:46
 msgid "View"
-msgstr "Просмотреть"
+msgstr "Көру"
 
 #: .\templates\concert\index.html:35 .\templates\news\index.html:37
 #: .\templates\ticket\index.html:47
 msgid "Delete"
-msgstr "Удалить"
+msgstr "Жою"
 
 #: .\templates\concert\list.html:29 .\templates\ticket\list.html:13
 msgid "To buy a ticket"
-msgstr "Купить билет"
+msgstr "Билет сатып алыңыз"
 
 #: .\templates\concert\read.html:3 .\templates\news\read.html:3
 #: .\templates\ticket\read.html:3
 msgid "Read"
-msgstr "Просмотреть"
+msgstr "Көру"
 
 #: .\templates\index.html:4 .\templates\registration\logged_out.html:4
 #: .\templates\registration\login.html:4
@@ -195,31 +192,31 @@ msgstr "SeerNeBuch"
 #: .\templates\news\create.html:6 .\templates\news\edit.html:6
 #: .\templates\news\read.html:6
 msgid "news"
-msgstr "Новость"
+msgstr "Жаңалық"
 
 #: .\templates\news\index.html:13
 msgid "title"
-msgstr "Заголовок"
+msgstr "Тақырып"
 
 #: .\templates\registration\logged_out.html:6
 msgid "Logged out!"
-msgstr "Вы вышли!"
+msgstr "Сіз шықтыңыз!"
 
 #: .\templates\registration\logged_out.html:7
 msgid "Login again"
-msgstr "Войти снова"
+msgstr "Қайта кіру"
 
 #: .\templates\registration\login.html:7
 msgid "Incorrect login or password"
-msgstr "Неверный логин или пароль"
+msgstr "Логин немесе құпия сөз дұрыс емес"
 
 #: .\templates\registration\login.html:12
 msgid "You dont have access"
-msgstr "У вас нет доступа"
+msgstr "Сізде қол жетімділік жоқ"
 
 #: .\templates\registration\login.html:14
 msgid "Login to see this page"
-msgstr "Войдите, чтобы увидеть эту страницу"
+msgstr "Бұл бетті көру үшін жүйеге кіріңіз"
 
 #: .\templates\registration\login.html:22
 msgid "Authorization"
@@ -227,98 +224,98 @@ msgstr "Авторизация"
 
 #: .\templates\registration\login.html:26
 msgid "Login"
-msgstr "Авторизоваться"
+msgstr "Кіру"
 
 #: .\templates\registration\login.html:31
 msgid "Lost password?"
-msgstr "Забыли пароль?"
+msgstr "Құпия сөзді ұмыттыңыз ба?"
 
 #: .\templates\registration\my_account.html:14
 msgid "Save changes"
-msgstr "Сохранить изменения"
+msgstr "Өзгерістерді сақтау"
 
 #: .\templates\registration\password_change_done.html:5
 msgid "Password changed"
-msgstr "Пароль изменен"
+msgstr "Құпия сөз өзгертілді"
 
 #: .\templates\registration\password_reset_complete.html:6
 msgid "Password reset completed!"
-msgstr "Сброс пароля завершен!"
+msgstr "Құпия сөзді қалпына келтіру аяқталды!"
 
 #: .\templates\registration\password_reset_complete.html:7
 msgid "Log in again?"
-msgstr "Войти снова?"
+msgstr "Қайта кіру керек пе?"
 
 #: .\templates\registration\password_reset_confirm.html:5
 #: .\templates\registration\password_reset_confirm.html:12
 msgid "Password reset confirmation"
-msgstr "Подтверждение сброса пароля"
+msgstr "Құпия сөзді қалпына келтіруді растау"
 
 #: .\templates\registration\password_reset_confirm.html:17
 #: .\templates\registration\password_reset_form.html:10
 #: .\templates\registration\password_reset_form.html:15
 msgid "Reset password"
-msgstr "Сброс пароля"
+msgstr "Құпия сөзді қалпына келтіру"
 
 #: .\templates\registration\password_reset_confirm.html:24
 msgid "Please enter (and confirm) your new password."
-msgstr "Пожалуйста, введите (и подтвердите) новый пароль."
+msgstr "Жаңа құпия сөзді енгізіңіз (және растаңыз)."
 
 #: .\templates\registration\password_reset_confirm.html:30
 msgid "New password:"
-msgstr "Новый пароль:"
+msgstr "Жаңа құпия сөз:"
 
 #: .\templates\registration\password_reset_confirm.html:35
 msgid "Confirm password:"
-msgstr "Подтвердить пароль:"
+msgstr "Құпия сөзді растау:"
 
 #: .\templates\registration\password_reset_confirm.html:46
 msgid "Password reset failed"
-msgstr "Не удалось сбросить пароль"
+msgstr "Құпия сөзді қалпына келтіру мүмкін болмады"
 
 #: .\templates\registration\password_reset_confirm.html:47
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used. Please request a new password reset."
-msgstr "Ссылка для сброса пароля недействительна, возможно, из-за того, что "
-"использовано. Пожалуйста, запросите новый сброс пароля."
+msgstr "Құпия сөзді қалпына келтіру сілтемесі жарамсыз болуы мүмкін, себебі "
+"пайдаланылды. Жаңа құпия сөзді қалпына келтіруді сұраңыз."
 
 #: .\templates\registration\password_reset_done.html:6
 msgid "Password reset"
-msgstr "Восстановление пароля"
+msgstr "Құпия сөзді қалпына келтіру"
 
 #: .\templates\registration\password_reset_done.html:7
 msgid "Check your email"
-msgstr "Проверьте свою электронную почту"
+msgstr "Электрондық поштаңызды тексеріңіз"
 
 #: .\templates\registration\password_reset_email.html:2
 msgid "Asked password reset email"
-msgstr "Электронная почта для сброса пароля"
+msgstr "Құпия сөзді қалпына келтіруге арналған электрондық пошта"
 
 #: .\templates\registration\password_reset_email.html:2
 msgid "Follow the link below:"
-msgstr "Перейдите по ссылке ниже:"
+msgstr "Төмендегі сілтемеге өтіңіз:"
 
 #: .\templates\registration\register_done.html:10
 msgid "Welcome"
-msgstr "Добро пожаловать"
+msgstr "Қош келдіңіз"
 
 #: .\templates\registration\register_done.html:11
 msgid "Your account has been successfully created."
-msgstr "Ваша учетная запись успешно создана."
+msgstr "Сіздің есептік жазбаңыз сәтті жасалды."
 
 #: .\templates\registration\register_done.html:11
 #: .\templates\registration\signup.html:18
 msgid "Log in"
-msgstr "Вход"
+msgstr "Кіру"
 
 #: .\templates\registration\signup.html:14
 msgid "Create an account"
-msgstr "Завести аккаунт"
+msgstr "Тіркелгі жасаңыз"
 
 #: .\templates\registration\signup.html:18
 msgid "Already have an account?"
-msgstr "У вас уже есть аккаунт?"
+msgstr "Сізде есептік жазба бар ма?"
 
 #: .\templates\ticket\create.html:6 .\templates\ticket\edit.html:6
 #: .\templates\ticket\read.html:6
@@ -327,4 +324,4 @@ msgstr "Билет"
 
 #: .\templates\ticket\index.html:15 .\templates\ticket\list.html:30
 msgid "user"
-msgstr "Пользователь"
+msgstr "Пайдаланушы"
